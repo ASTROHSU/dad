@@ -25,7 +25,7 @@
         /* 卡片式設計優化 */
         .dashboard-card { 
             background: white; 
-            border-radius: 20px; /* 更大的圓角 */
+            border-radius: 20px;
             border: 1px solid #E2E8F0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease; 
@@ -34,7 +34,7 @@
         /* 標題與圖標統一 */
         .section-title { 
             color: var(--primary-navy);
-            font-size: 1.5rem; /* text-2xl */
+            font-size: 1.5rem;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -43,11 +43,11 @@
 
         .section-icon {
             color: var(--primary-navy);
-            width: 2rem; /* h-8 */
-            height: 2rem; /* w-8 */
+            width: 2rem;
+            height: 2rem;
         }
 
-        /* 資訊列優化：加大間距與字體 */
+        /* 資訊列優化 */
         .info-row { 
             display: flex; 
             justify-content: space-between; 
@@ -55,7 +55,7 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid #EDF2F7;
-            font-size: 1.125rem; /* text-lg */
+            font-size: 1.125rem;
         }
         .info-row:last-child { border-bottom: none; }
 
@@ -90,6 +90,15 @@
             margin-top: 1rem;
             font-size: 1.125rem;
         }
+        
+        /* 警告框風格 */
+        .warning-box {
+            background-color: #FFFAF0;
+            border: 2px solid #F6E05E;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body class="p-4 md:p-8 min-h-screen">
@@ -100,9 +109,9 @@
             <div>
                 <h1 class="text-3xl md:text-4xl font-bold" style="color: var(--primary-navy);">家庭決策整合儀表板</h1>
                 <div class="flex flex-wrap items-center gap-4 text-lg text-slate-600 mt-3 font-medium">
-                    <span>📅 2026/01/16 更新</span>
+                    <span>📅 2026/01/16 (週五)</span>
                     <span class="hidden md:inline text-slate-300">|</span>
-                    <span>📍 台南成大醫院 (候床中)</span>
+                    <span>📍 台南成大醫院 (急診候床)</span>
                     <span class="bg-slate-100 text-slate-800 px-3 py-1 rounded-lg text-base font-bold block md:inline mt-2 md:mt-0">主責：許明恩</span>
                 </div>
             </div>
@@ -121,7 +130,6 @@
             <div class="dashboard-card p-6 md:p-8">
                 <div class="flex flex-col gap-4 mb-6 border-b border-slate-100 pb-4">
                     <div class="section-title">
-                        <!-- 扁平化線條圖示 -->
                         <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                         醫療與病況追蹤
                     </div>
@@ -150,22 +158,22 @@
                     </div>
 
                     <div class="highlight-box">
-                        <p class="font-bold text-lg mb-2" style="color: var(--primary-navy);">⚠️ 風險警示：向下壓迫</p>
+                        <p class="font-bold text-lg mb-2" style="color: var(--primary-navy);">⚠️ 風險警示</p>
                         <p class="text-base leading-relaxed text-slate-700">
-                            雖然中線未偏移，但「向下壓迫」直接威脅腦幹（生命中樞）。風險在於<b class="text-red-600">突發性昏迷或呼吸抑制</b>。
+                            雖然中線未偏移，但「向下壓迫」直接威脅腦幹。風險在於<b class="text-red-600">突發性昏迷或呼吸抑制</b>。
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- 2. 產權規劃 -->
-            <div class="dashboard-card p-6 md:p-8">
+            <!-- 2. 產權規劃 (重點更新) -->
+            <div class="dashboard-card p-6 md:p-8 border-2 border-amber-400">
                 <div class="flex flex-col gap-4 mb-6 border-b border-slate-100 pb-4">
                     <div class="section-title">
                         <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                         仁德房產移轉方案
                     </div>
-                    <span class="status-badge text-amber-600 border-amber-600 self-start">急件處理</span>
+                    <span class="status-badge text-amber-600 border-amber-600 self-start">今日 11:00 評估</span>
                 </div>
 
                 <div class="space-y-4">
@@ -174,32 +182,31 @@
                         <span class="text-slate-700 font-bold">協辦：慕光地政士</span>
                         <a href="https://www.mukuangland.com/" target="_blank" class="text-blue-600 font-bold underline px-2 py-1">網站</a>
                     </div>
-                    <!-- 狀態註記：代書 -->
-                    <div class="bg-amber-50 rounded-xl p-4 flex items-center justify-between border border-amber-200">
-                        <span class="text-lg font-bold text-amber-800">稅務試算與合約</span>
-                        <span class="px-3 py-1 rounded bg-amber-200 text-amber-900 font-bold text-base">代書尚未回覆</span>
-                    </div>
 
                     <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2 text-base">
-                        <p><span class="text-slate-500 font-medium">標的：</span>台南市仁德區二仁路一段 106 號</p>
-                        <p><span class="text-slate-500 font-medium">地號：</span>仁德區嘉南段 0731-0000</p>
+                        <p><span class="text-slate-500 font-medium">標的：</span>仁德區二仁路一段 (嘉南段 0731)</p>
                         <p><span class="text-slate-500 font-medium">價值：</span>公告現值總計約 <b class="money-highlight">465 萬</b></p>
                     </div>
 
-                    <!-- 方案選擇區 - 卡片化 -->
-                    <div class="space-y-3 mt-4">
-                        <div class="border-2 border-green-500 rounded-xl p-4 bg-green-50">
-                            <p class="text-lg font-bold text-green-800 mb-1">方案 A (首選)：混合型贈與</p>
-                            <p class="text-base text-green-900">贈與 244 萬 + 買賣 221 萬。產權完整，且墊高未來成本。需 66 萬金流。</p>
-                        </div>
-                        <div class="border border-slate-300 rounded-xl p-4 hover:bg-slate-50 transition-colors">
-                            <p class="text-lg font-bold text-slate-700 mb-1">方案 B (備選)：全額生前贈與</p>
-                            <p class="text-base text-slate-600">若金流來不及做，直接繳稅過戶。速度最快，產權最穩。</p>
-                        </div>
-                        <div class="border border-slate-300 rounded-xl p-4 hover:bg-slate-50 transition-colors">
-                            <p class="text-lg font-bold text-slate-700 mb-1">方案 C (底線)：公證遺囑</p>
-                            <p class="text-base text-slate-600">若完全無法負擔稅金。現省錢，但未來有特留分糾紛。</p>
-                        </div>
+                    <!-- 🔴 稅務風險警告區 (User 要求加註) -->
+                    <div class="warning-box">
+                        <p class="text-lg font-bold text-amber-800 mb-2 flex items-center">
+                            <span class="text-xl mr-2">⚠️</span>代書評估重點：
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2 text-base text-slate-800">
+                            <li>
+                                <b>特留分回扣風險：</b>若父親在贈與後 <span class="text-red-600 font-bold">2 年內過世</span>，該房產價值在法律上是否會被「計入遺產總額」並影響特留分計算？(需請代書確認攻防策略)
+                            </li>
+                            <li>
+                                <b>土增稅大錢：</b>持有超過 20 年，漲幅極大。務必試算 <span class="text-blue-700 font-bold">「一生一次自用優惠 (10%)」</span> 與 「一般稅率 (20-40%)」的價差。
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 公證狀態 -->
+                    <div class="bg-slate-50 rounded-xl p-4 flex items-center justify-between border border-slate-200 mt-2">
+                        <span class="text-lg font-bold text-slate-600">公證預約</span>
+                        <span class="px-3 py-1 rounded bg-slate-200 text-slate-600 font-bold text-base">暫緩：等代書確認</span>
                     </div>
                 </div>
             </div>
@@ -211,34 +218,42 @@
                         <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         保險理賠資訊
                     </div>
-                    <span class="status-badge text-blue-600 border-blue-600 self-start">資料彙整中</span>
+                    <span class="status-badge text-green-600 border-green-600 self-start">雙保單完整保障</span>
                 </div>
 
                 <div class="space-y-4 text-lg">
-                    <!-- 狀態註記：保單缺漏 -->
-                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-4 flex items-center gap-4">
-                        <span class="text-3xl">❓</span>
-                        <div>
-                            <p class="text-lg font-bold text-red-700">缺少「新光人壽」保單資訊</p>
-                            <p class="text-base text-red-600 mt-1">需盡快翻找家中或聯繫業務員補齊</p>
+                    
+                    <!-- 總理賠預估區 -->
+                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center mb-6">
+                        <p class="text-slate-500 text-base font-medium">預估每日住院理賠總額</p>
+                        <p class="font-bold text-blue-800 text-3xl mt-1">~4,500<span class="text-lg">元</span></p>
+                        <p class="text-sm text-blue-600 mt-2">(安泰 3,000 + 新光 約 1,500)</p>
+                        <div class="mt-3 pt-3 border-t border-blue-200">
+                             <p class="text-slate-500 text-sm">身故總保障</p>
+                             <p class="font-bold text-blue-900 text-xl">約 85 萬</p>
                         </div>
                     </div>
 
-                    <div class="pt-4 mt-2">
-                        <p class="text-lg font-bold text-slate-500 mb-3 border-b pb-2">已確認：安泰 (富邦) V100...</p>
-                        <div class="grid grid-cols-2 gap-4 mb-4">
-                             <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center">
-                                <p class="text-slate-500 text-base font-medium">一般住院 (日)</p>
-                                <p class="font-bold text-blue-800 text-2xl mt-1">3,000<span class="text-base">元</span></p>
-                            </div>
-                            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center">
-                                <p class="text-slate-500 text-base font-medium">加護病房 (日)</p>
-                                <p class="font-bold text-blue-800 text-2xl mt-1">7,000<span class="text-base">元</span></p>
+                    <!-- 通知狀態 -->
+                    <div class="bg-slate-50 rounded-xl p-4 flex items-center justify-between border border-slate-200">
+                        <span class="text-lg font-bold text-slate-600">業務員通知</span>
+                        <span class="px-3 py-1 rounded bg-slate-200 text-slate-600 font-bold text-base">暫緩：等病房入住</span>
+                    </div>
+
+                    <div class="space-y-4 mt-4">
+                        <div class="border-l-4 border-blue-500 pl-4 py-1">
+                            <p class="font-bold text-slate-800 text-lg">1. 安泰 (富邦)</p>
+                            <div class="text-base text-slate-600 mt-1 space-y-1">
+                                <p>• 住院日額：3,000 / 加護 7,000</p>
+                                <p>• 重大疾病：25 萬 / 罹癌 6 萬</p>
                             </div>
                         </div>
-                        <div class="info-row">
-                            <span class="text-slate-500 font-medium">重大疾病金</span>
-                            <span class="money-highlight text-right">25 萬<br><span class="text-base font-normal text-slate-600">(若符合定義)</span></span>
+                        <div class="border-l-4 border-amber-500 pl-4 py-1">
+                            <p class="font-bold text-slate-800 text-lg">2. 新光 (新長安)</p>
+                            <div class="text-base text-slate-600 mt-1 space-y-1">
+                                <p>• 身故：30 萬</p>
+                                <p>• 綜合醫療/保障：含手術津貼</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -246,30 +261,35 @@
 
         </div>
 
-        <!-- 底部：緊急行動清單 -->
+        <!-- 底部：今日行動清單 -->
         <div class="dashboard-card p-6 md:p-8 border-l-8 border-slate-600">
             <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
                 <span class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-white text-lg font-bold">!</span>
-                明日 (1/16) 關鍵行動清單
+                今日 (1/16) 關鍵行動清單
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="relative pl-6 border-l-4 border-slate-200 pb-2 md:pb-0">
-                    <p class="text-base font-bold text-blue-600 uppercase mb-2">AM 09:00 - 代書 (慕光)</p>
-                    <p class="text-xl font-bold text-slate-800">追蹤試算進度</p>
-                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">聯繫慕光地政士。告知需「贈與+買賣」混合件試算。若金流證明困難，請代書直接準備「全額贈與」備案。</p>
+                <div class="relative pl-6 border-l-4 border-amber-500 pb-2 md:pb-0">
+                    <p class="text-base font-bold text-amber-600 uppercase mb-2">AM 11:00 - 代書 (慕光)</p>
+                    <p class="text-xl font-bold text-slate-800">稅務與方案評估</p>
+                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">
+                        與代書見面。重點確認：
+                        <br>1. <b class="text-red-600">土增稅</b>能否用自用優惠？
+                        <br>2. 若<b class="text-red-600">2年內過世</b>，特留分風險如何解套？
+                        <br>3. 贈與 vs 買賣最划算路徑。
+                    </p>
                 </div>
 
-                <div class="relative pl-6 border-l-4 border-slate-200 pb-2 md:pb-0">
-                    <p class="text-base font-bold text-amber-600 uppercase mb-2">AM 10:00 - 公證 & 保險</p>
-                    <p class="text-xl font-bold text-slate-800">公證預約 & 尋找保單</p>
-                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">1. 聯繫公證人確認到院時間。<br>2. 聯絡家人翻找「新光人壽」保單，確認是否有癌症險。</p>
+                <div class="relative pl-6 border-l-4 border-slate-300 pb-2 md:pb-0 opacity-70">
+                    <p class="text-base font-bold text-slate-500 uppercase mb-2">待命 - 公證</p>
+                    <p class="text-xl font-bold text-slate-800">等待代書建議</p>
+                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">若代書評估需「立刻過戶」，則馬上聯繫公證人；若採遺囑或其他方案，則暫緩。</p>
                 </div>
 
-                <div class="relative pl-6 border-l-4 border-slate-200">
-                    <p class="text-base font-bold text-red-600 uppercase mb-2">全天待命 - 醫療</p>
-                    <p class="text-xl font-bold text-slate-800">意識證明 & 病房</p>
-                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">主動詢問醫師：「目前能否口述證明意識清楚？」一旦醫師點頭，立刻錄影或請公證人進場。</p>
+                <div class="relative pl-6 border-l-4 border-slate-300 opacity-70">
+                    <p class="text-base font-bold text-slate-500 uppercase mb-2">待命 - 保險</p>
+                    <p class="text-xl font-bold text-slate-800">等待病房</p>
+                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">確認從急診轉入病房後，再通知業務員啟動理賠流程。</p>
                 </div>
 
             </div>
