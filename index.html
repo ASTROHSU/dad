@@ -99,6 +99,17 @@
             padding: 1rem;
             margin-top: 1rem;
         }
+
+        /* 新增：推薦方案標籤 */
+        .recommended-badge {
+            background-color: #C6F6D5;
+            color: #22543D;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
     </style>
 </head>
 <body class="p-4 md:p-8 min-h-screen">
@@ -119,7 +130,7 @@
                  <div class="px-6 py-3 rounded-xl border-2 border-red-500 text-red-600 text-lg font-bold w-full md:w-auto text-center md:text-right bg-white shadow-sm">
                     ⚠️ 法律窗口期：意識尚清醒
                 </div>
-                <p class="text-base text-slate-500 mt-2 pl-1 md:pl-0 font-medium">須把握腫瘤向下壓迫前的清醒時間</p>
+                <p class="text-base text-slate-500 mt-2 pl-1 md:pl-0 font-medium">代書建議：把握爸爸能表達意願時機</p>
             </div>
         </header>
 
@@ -146,7 +157,6 @@
                         <span class="data-highlight text-right">垂直向下壓迫<br><span class="text-base font-normal text-slate-600">(腦幹風險)</span></span>
                     </div>
                     
-                    <!-- 狀態註記：醫師口述 -->
                     <div class="bg-amber-50 rounded-xl p-4 flex items-center justify-between border border-amber-200 mt-4">
                         <span class="text-lg font-bold text-amber-800">醫師意識證明</span>
                         <span class="px-3 py-1 rounded bg-amber-200 text-amber-900 font-bold text-base">尚未口述確認</span>
@@ -166,14 +176,14 @@
                 </div>
             </div>
 
-            <!-- 2. 產權規劃 -->
-            <div class="dashboard-card p-6 md:p-8 border-2 border-amber-400">
+            <!-- 2. 產權規劃 (重點更新) -->
+            <div class="dashboard-card p-6 md:p-8 border-2 border-green-500">
                 <div class="flex flex-col gap-4 mb-6 border-b border-slate-100 pb-4">
                     <div class="section-title">
                         <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                         仁德房產移轉方案
                     </div>
-                    <span class="status-badge text-amber-600 border-amber-600 self-start">今日 11:00 評估</span>
+                    <span class="status-badge text-green-700 border-green-700 self-start bg-green-50">代書評估完成</span>
                 </div>
 
                 <div class="space-y-4">
@@ -185,29 +195,30 @@
 
                     <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2 text-base">
                         <p><span class="text-slate-500 font-medium">標的：</span>仁德區二仁路一段 (嘉南段 0731)</p>
-                        <p><span class="text-slate-500 font-medium">價值：</span>公告現值總計約 <b class="money-highlight">465 萬</b></p>
+                        <p><span class="text-slate-500 font-medium">公告現值：</span>約 465 萬</p>
+                        <p><span class="text-slate-500 font-medium">土增稅風險：</span>持有 21 年，稅額預估 <b class="text-red-600">44 萬</b> (若直接贈與/買賣)</p>
                     </div>
 
-                    <!-- 🔴 稅務風險警告區 -->
-                    <div class="warning-box">
-                        <p class="text-lg font-bold text-amber-800 mb-2 flex items-center">
-                            <span class="text-xl mr-2">⚠️</span>代書評估重點：
+                    <!-- 🟢 策略大轉彎：配偶贈與 -->
+                    <div class="bg-green-50 border-2 border-green-400 rounded-xl p-4">
+                        <p class="text-xl font-bold text-green-800 mb-2 flex items-center">
+                            <span class="text-2xl mr-2">🎯</span>代書推薦首選：配偶贈與
                         </p>
                         <ul class="list-disc pl-5 space-y-2 text-base text-slate-800">
-                            <li>
-                                <b>特留分回扣風險：</b>若父親在贈與後 <span class="text-red-600 font-bold">2 年內過世</span>，該房產價值在法律上是否會被「計入遺產總額」並影響特留分計算？
-                            </li>
-                            <li>
-                                <b>土增稅大錢：</b>持有超過 20 年，漲幅極大。務必試算 <span class="text-blue-700 font-bold">「一生一次自用優惠 (10%)」</span> 與 「一般稅率 (20-40%)」的價差。
-                            </li>
+                            <li><b>對象：</b>爸爸贈與給媽媽。</li>
+                            <li><b>成本極低：</b>免土增稅 (不課徵)、免贈與稅。只需繳契稅+代書費 <b class="money-highlight">約 5 萬元</b>。</li>
+                            <li><b>優勢：</b>3週內完成。媽媽取得後，未來繼承給你免房地合一稅。暫時隔絕手足繼承權。</li>
                         </ul>
                     </div>
 
-                    <!-- 公證狀態 -->
-                    <div class="bg-slate-50 rounded-xl p-4 flex items-center justify-between border border-slate-200 mt-2">
-                        <span class="text-lg font-bold text-slate-600">公證預約</span>
-                        <span class="px-3 py-1 rounded bg-slate-200 text-slate-600 font-bold text-base">暫緩：等代書確認</span>
+                    <!-- 備案 -->
+                    <div class="space-y-2 mt-2">
+                         <div class="border border-slate-300 rounded-xl p-3 bg-slate-50">
+                            <p class="text-base font-bold text-slate-700">備案：自書遺囑 (省錢但有風險)</p>
+                            <p class="text-sm text-slate-600">若爸爸還能寫字，親筆寫遺囑。風險：手足可告特留分。</p>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
 
@@ -223,7 +234,6 @@
 
                 <div class="space-y-4 text-lg">
                     
-                    <!-- 總理賠預估區 -->
                     <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center mb-6">
                         <p class="text-slate-500 text-base font-medium">預估每日住院理賠總額</p>
                         <p class="font-bold text-blue-800 text-3xl mt-1">~4,500<span class="text-lg">元</span></p>
@@ -234,7 +244,6 @@
                         </div>
                     </div>
 
-                    <!-- 通知狀態 -->
                     <div class="bg-slate-50 rounded-xl p-4 flex items-center justify-between border border-slate-200">
                         <span class="text-lg font-bold text-slate-600">業務員通知</span>
                         <span class="px-3 py-1 rounded bg-slate-200 text-slate-600 font-bold text-base">暫緩：等病房入住</span>
@@ -261,7 +270,7 @@
 
         </div>
 
-        <!-- 4. 目前花費紀錄 (新增區塊) -->
+        <!-- 4. 目前花費紀錄 -->
         <div class="dashboard-card p-6 md:p-8">
             <div class="flex flex-col gap-4 mb-6 border-b border-slate-100 pb-4">
                 <div class="section-title">
@@ -273,9 +282,8 @@
             <div class="space-y-2">
                 <div class="info-row">
                     <span class="text-slate-500 font-medium text-lg">地政士諮詢費 (慕光)</span>
-                    <span class="money-highlight text-right">1,000 元</span>
+                    <span class="text-slate-800 text-right font-bold">1,000 元 <span class="text-sm font-normal text-slate-500 block">(有收據，未來辦件可折抵)</span></span>
                 </div>
-                <!-- 未來可在此增加其他項目 -->
                 
                 <div class="bg-slate-50 p-6 rounded-2xl mt-6 border border-slate-100 flex justify-between items-center">
                     <span class="text-xl font-bold" style="color: var(--primary-navy);">累計總支出</span>
@@ -284,35 +292,39 @@
             </div>
         </div>
 
-        <!-- 底部：今日行動清單 -->
+        <!-- 底部：更新後行動清單 -->
         <div class="dashboard-card p-6 md:p-8 border-l-8 border-slate-600">
             <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
                 <span class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-white text-lg font-bold">!</span>
-                今日 (1/16) 關鍵行動清單
+                後續關鍵行動 (After 11:00)
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <div class="relative pl-6 border-l-4 border-amber-500 pb-2 md:pb-0">
-                    <p class="text-base font-bold text-amber-600 uppercase mb-2">AM 11:00 - 代書 (慕光)</p>
-                    <p class="text-xl font-bold text-slate-800">稅務與方案評估</p>
+                    <p class="text-base font-bold text-amber-600 uppercase mb-2">任務 1 - 查戶籍</p>
+                    <p class="text-xl font-bold text-slate-800">確認收養關係</p>
                     <p class="text-lg text-slate-600 mt-2 leading-relaxed">
-                        與代書見面。重點確認：
-                        <br>1. <b class="text-red-600">土增稅</b>能否用自用優惠？
-                        <br>2. 若<b class="text-red-600">2年內過世</b>，特留分風險如何解套？
-                        <br>3. 贈與 vs 買賣最划算路徑。
+                        請媽媽持身分證去戶政申請戶籍謄本。
+                        <br>重點：<b class="text-red-600">確認二哥的父母欄位與收養註記</b>。
                     </p>
                 </div>
 
-                <div class="relative pl-6 border-l-4 border-slate-300 pb-2 md:pb-0 opacity-70">
-                    <p class="text-base font-bold text-slate-500 uppercase mb-2">待命 - 公證</p>
-                    <p class="text-xl font-bold text-slate-800">等待代書建議</p>
-                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">若代書評估需「立刻過戶」，則馬上聯繫公證人；若採遺囑或其他方案，則暫緩。</p>
+                <div class="relative pl-6 border-l-4 border-green-500 pb-2 md:pb-0">
+                    <p class="text-base font-bold text-green-600 uppercase mb-2">任務 2 - 文件</p>
+                    <p class="text-xl font-bold text-slate-800">申請印鑑證明</p>
+                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">
+                        爸爸需申請「仁德戶政」印鑑證明。
+                        <br>若無法親自到場，需申請戶政人員到院核對。
+                    </p>
                 </div>
 
-                <div class="relative pl-6 border-l-4 border-slate-300 opacity-70">
-                    <p class="text-base font-bold text-slate-500 uppercase mb-2">待命 - 保險</p>
-                    <p class="text-xl font-bold text-slate-800">等待病房</p>
-                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">確認從急診轉入病房後，再通知業務員啟動理賠流程。</p>
+                <div class="relative pl-6 border-l-4 border-blue-500">
+                    <p class="text-base font-bold text-blue-600 uppercase mb-2">任務 3 - 溝通</p>
+                    <p class="text-xl font-bold text-slate-800">確認配偶贈與</p>
+                    <p class="text-lg text-slate-600 mt-2 leading-relaxed">
+                        確認爸爸與媽媽同意「先過戶給媽媽」。
+                        <br>優點：省 40 萬稅金 + 未來節稅。
+                    </p>
                 </div>
 
             </div>
