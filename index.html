@@ -123,7 +123,7 @@
             </div>
         </header>
 
-        <!-- 主要內容三欄 -->
+        <!-- 主要內容區 -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             <!-- 1. 健康病況 -->
@@ -166,7 +166,7 @@
                 </div>
             </div>
 
-            <!-- 2. 產權規劃 (重點更新) -->
+            <!-- 2. 產權規劃 -->
             <div class="dashboard-card p-6 md:p-8 border-2 border-amber-400">
                 <div class="flex flex-col gap-4 mb-6 border-b border-slate-100 pb-4">
                     <div class="section-title">
@@ -188,14 +188,14 @@
                         <p><span class="text-slate-500 font-medium">價值：</span>公告現值總計約 <b class="money-highlight">465 萬</b></p>
                     </div>
 
-                    <!-- 🔴 稅務風險警告區 (User 要求加註) -->
+                    <!-- 🔴 稅務風險警告區 -->
                     <div class="warning-box">
                         <p class="text-lg font-bold text-amber-800 mb-2 flex items-center">
                             <span class="text-xl mr-2">⚠️</span>代書評估重點：
                         </p>
                         <ul class="list-disc pl-5 space-y-2 text-base text-slate-800">
                             <li>
-                                <b>特留分回扣風險：</b>若父親在贈與後 <span class="text-red-600 font-bold">2 年內過世</span>，該房產價值在法律上是否會被「計入遺產總額」並影響特留分計算？(需請代書確認攻防策略)
+                                <b>特留分回扣風險：</b>若父親在贈與後 <span class="text-red-600 font-bold">2 年內過世</span>，該房產價值在法律上是否會被「計入遺產總額」並影響特留分計算？
                             </li>
                             <li>
                                 <b>土增稅大錢：</b>持有超過 20 年，漲幅極大。務必試算 <span class="text-blue-700 font-bold">「一生一次自用優惠 (10%)」</span> 與 「一般稅率 (20-40%)」的價差。
@@ -259,6 +259,29 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- 4. 目前花費紀錄 (新增區塊) -->
+        <div class="dashboard-card p-6 md:p-8">
+            <div class="flex flex-col gap-4 mb-6 border-b border-slate-100 pb-4">
+                <div class="section-title">
+                    <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    目前花費紀錄
+                </div>
+            </div>
+            
+            <div class="space-y-2">
+                <div class="info-row">
+                    <span class="text-slate-500 font-medium text-lg">地政士諮詢費 (慕光)</span>
+                    <span class="money-highlight text-right">1,000 元</span>
+                </div>
+                <!-- 未來可在此增加其他項目 -->
+                
+                <div class="bg-slate-50 p-6 rounded-2xl mt-6 border border-slate-100 flex justify-between items-center">
+                    <span class="text-xl font-bold" style="color: var(--primary-navy);">累計總支出</span>
+                    <span class="money-highlight text-2xl">1,000 元</span>
+                </div>
+            </div>
         </div>
 
         <!-- 底部：今日行動清單 -->
