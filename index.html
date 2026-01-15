@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭決策整合儀表板 - 醫療/房產/保險</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8fafc; color: #334155; }
+        .dashboard-card { background: white; border-radius: 12px; transition: all 0.3s ease; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
+        .section-header { @apply flex items-center justify-between mb-4 border-b pb-3; }
+        .section-title { @apply text-lg font-bold flex items-center gap-2; }
+        .info-row { @apply flex justify-between py-2 border-b border-slate-100 last:border-0 text-sm; }
+        .highlight-box { @apply rounded-lg p-3 text-sm font-medium mt-2; }
+    </style>
+</head>
+<body class="p-4 md:p-6 bg-slate-50">
+    <div class="max-w-7xl mx-auto space-y-6">
+        
+        <!-- 頂部狀態列 -->
+        <header class="bg-white p-5 rounded-xl shadow-sm border-l-8 border-indigo-600 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-800">家庭決策整合儀表板</h1>
+                <div class="flex items-center gap-2 text-sm text-slate-500 mt-1">
+                    <span>📅 2026/01/16 更新</span>
+                    <span>📍 台南成大醫院 (候床中)</span>
+                    <span class="bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded text-xs font-bold">主責：Blocktrend 創辦人</span>
+                </div>
+            </div>
+            <div class="flex flex-col items-end">
+                 <div class="bg-red-50 text-red-700 px-4 py-2 rounded-lg border border-red-200 text-sm font-bold animate-pulse">
+                    ⚠️ 法律窗口期：意識尚清醒
+                </div>
+                <p class="text-xs text-slate-400 mt-1">須把握腫瘤向下壓迫前的清醒時間</p>
+            </div>
+        </header>
+
+        <!-- 主要內容三欄 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- 1. 健康病況 (修正：向下壓迫風險) -->
+            <div class="dashboard-card border-t-4 border-rose-500 p-5">
+                <div class="section-header">
+                    <div class="section-title text-rose-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        醫療與病況追蹤
+                    </div>
+                    <span class="bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded-full font-bold">待入神外病房</span>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="info-row">
+                        <span class="text-slate-500">腫瘤位置</span>
+                        <span class="font-bold text-slate-800 text-right">腦部中央 (約 5cm)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="text-slate-500">壓迫型態</span>
+                        <span class="font-bold text-red-600 text-right">垂直向下壓迫 (腦幹風險)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="text-slate-500">目前處置</span>
+                        <span class="font-bold text-slate-800 text-right">急診候床、降腦壓藥物</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="text-slate-500">預估病程</span>
+                        <span class="font-bold text-amber-600 text-right">待醫師進一步評估</span>
+                    </div>
+
+                    <div class="highlight-box bg-rose-50 text-rose-800">
+                        <p class="font-bold mb-1">⚠️ 風險警示：向下壓迫</p>
+                        <p class="text-xs leading-relaxed opacity-90">
+                            雖然中線未偏移，但「向下壓迫」直接威脅腦幹（生命中樞）。風險在於<b>突發性昏迷或呼吸抑制</b>。目前的清醒是藥物控制的結果，隨時可能變化。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. 產權規劃 (詳細：稅務與地號) -->
+            <div class="dashboard-card border-t-4 border-amber-500 p-5">
+                <div class="section-header">
+                    <div class="section-title text-amber-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        仁德房產移轉方案
+                    </div>
+                    <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full font-bold">急件處理</span>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="bg-slate-50 p-3 rounded text-xs space-y-1 border border-slate-200">
+                        <p><span class="text-slate-500">標的：</span>台南市仁德區二仁路一段 106 號</p>
+                        <p><span class="text-slate-500">地號：</span>仁德區嘉南段 0731-0000</p>
+                        <p><span class="text-slate-500">價值：</span>公告現值總計約 <b class="text-slate-800">465 萬</b></p>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="text-slate-500">首選策略</span>
+                        <span class="font-bold text-amber-700 text-right">混合型贈與 (全拿)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="text-slate-500">贈與部分</span>
+                        <span class="text-right">利用 244 萬免稅額</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="text-slate-500">買賣部分</span>
+                        <span class="text-right">餘額 221 萬 (需金流證明)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="text-slate-500">必繳稅金</span>
+                        <span class="font-bold text-red-600 text-right">土增稅約 30-60 萬</span>
+                    </div>
+
+                    <div class="highlight-box bg-amber-50 text-amber-800">
+                        <p class="font-bold mb-1">🎯 執行目標</p>
+                        <p class="text-xs leading-relaxed">
+                            利用父親意識清醒窗口，透過<b>「公證贈與」</b>完成產權移轉。即使需繳土增稅，但能換取<b>100% 完整產權</b>，避免未來手足特留分糾紛。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. 保險理賠 (詳細：安泰/富邦) -->
+            <div class="dashboard-card border-t-4 border-blue-500 p-5">
+                <div class="section-header">
+                    <div class="section-title text-blue-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        保險理賠資訊
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-bold">安泰 V100...</span>
+                </div>
+
+                <div class="space-y-3 text-sm">
+                    <div class="grid grid-cols-2 gap-3 mb-2">
+                         <div class="bg-blue-50 p-2 rounded border border-blue-100 text-center">
+                            <p class="text-slate-500 text-xs">一般住院 (日)</p>
+                            <p class="font-bold text-blue-700 text-lg">3,000<span class="text-xs">元</span></p>
+                        </div>
+                        <div class="bg-blue-50 p-2 rounded border border-blue-100 text-center">
+                            <p class="text-slate-500 text-xs">加護病房 (日)</p>
+                            <p class="font-bold text-blue-700 text-lg">7,000<span class="text-xs">元</span></p>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="text-slate-500">重大疾病金</span>
+                        <span class="font-bold text-slate-800 text-right">25 萬 (若符合定義)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="text-slate-500">初次罹癌金</span>
+                        <span class="font-bold text-slate-800 text-right">6 萬 (若確診惡性)</span>
+                    </div>
+                     <div class="info-row">
+                        <span class="text-slate-500">身故保障</span>
+                        <span class="font-bold text-slate-800 text-right">約 55 萬 (+20萬若癌症)</span>
+                    </div>
+
+                    <div class="highlight-box bg-blue-50 text-blue-800">
+                        <p class="font-bold mb-1">💰 財務安心指標</p>
+                        <p class="text-xs leading-relaxed">
+                            目前每日住院理賠 (3000元) 足以覆蓋成大雙人房或聘請部分看護費用。若需進行手術或轉入加護病房，額度會再提升。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 底部：緊急行動清單 -->
+        <div class="dashboard-card p-6 border-l-4 border-slate-400">
+            <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-slate-800 text-white text-xs">!</span>
+                明日 (1/16) 關鍵行動清單
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="relative pl-4 border-l-2 border-slate-200">
+                    <p class="text-xs font-bold text-blue-600 uppercase mb-1">AM 09:00 - 代書</p>
+                    <p class="text-sm font-medium text-slate-800">土增稅精算</p>
+                    <p class="text-xs text-slate-500 mt-1">確認「嘉南段0731」稅額。告知代書需辦理「贈與+買賣」混合件，請求急件處理。</p>
+                </div>
+
+                <div class="relative pl-4 border-l-2 border-slate-200">
+                    <p class="text-xs font-bold text-amber-600 uppercase mb-1">AM 10:00 - 公證</p>
+                    <p class="text-sm font-medium text-slate-800">預約病房公證</p>
+                    <p class="text-xs text-slate-500 mt-1">聯繫民間公證人確認到院時間。這是確保產權移轉不被手足挑戰的唯一防線。</p>
+                </div>
+
+                <div class="relative pl-4 border-l-2 border-slate-200">
+                    <p class="text-xs font-bold text-rose-600 uppercase mb-1">全天待命 - 醫療</p>
+                    <p class="text-sm font-medium text-slate-800">監控意識與床位</p>
+                    <p class="text-xs text-slate-500 mt-1">急診候床期間，若意識轉差（腦幹受壓）需立刻通知醫護。同時請醫師開立意識清醒證明。</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
